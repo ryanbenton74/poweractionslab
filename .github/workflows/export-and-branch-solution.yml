@@ -1,24 +1,23 @@
 name: export-and-branch-solution
-# Export solution from DEV environment
-# unpack it and prepare, commit and push a git branch with the changes
+# Export solution from DEV environment, unpack it, and prepare/commit a branch
 
 on:
   workflow_dispatch:
     inputs:
       solution_name:
-        description: "name of the solution to worked on from Power Platform"
+        description: "name of the solution to work on from Power Platform"
         required: true
         default: "ALMLab"
       solution_exported_folder:
-        description: "folder name for staging the exported solution *do not change*"
+        description: "folder for staging the exported solution (do not change)"
         required: true
         default: "out/exported"
       solution_folder:
-        description: "staging the unpacked solution folder before check-in *do not change*"
+        description: "folder for staging the unpacked solution (do not change)"
         required: true
         default: "out/solutions"
       solution_target_folder:
-        description: "folder name to be created and checked in *do not change*"
+        description: "repo folder to check in (do not change)"
         required: true
         default: "solutions"
 
@@ -42,7 +41,6 @@ jobs:
         with:
           lfs: true
 
-      # Recommended first step in docs/examples
       - name: Install Power Platform Tools
         uses: microsoft/powerplatform-actions/actions-install@v1
 
@@ -54,7 +52,7 @@ jobs:
           client-secret: ${{ secrets.PowerPlatformSPN }}
           tenant-id: ${{ env.TENANT_ID }}
 
-      - name: Export solution (unmanaged)
+      - name: Export solution
         uses: microsoft/powerplatform-actions/export-solution@v1
         with:
           environment-url: ${{ env.ENVIRONMENT_URL }}
@@ -64,7 +62,7 @@ jobs:
           solution-name: ${{ github.event.inputs.solution_name }}
           solution-output-file: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}.zip
 
-      - name: Unpack solution (unmanaged)
+      - name: Unpack solution
         uses: microsoft/powerplatform-actions/unpack-solution@v1
         with:
           solution-file: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}.zip
