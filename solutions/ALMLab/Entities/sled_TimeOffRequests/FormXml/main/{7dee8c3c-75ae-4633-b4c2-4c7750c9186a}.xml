@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{7c91f4df-2ea9-4ebe-882a-a31bbcf2a19a}" IsUserDefined="1">
           <labels>
@@ -37,11 +37,72 @@
                     </row>
                   </rows>
                 </section>
+                <section name="dt_section_3" id="3dcfed1b-302c-4a71-b538-ec36ad205a05" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Dates" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{c9a0f1ca-966f-4ffe-9af0-4a2c9808a9b0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date Approved" languagecode="1033" />
+                        </labels>
+                        <control id="sled_dateapproved" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sled_dateapproved" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
               </sections>
             </column>
           </columns>
         </tab>
       </tabs>
+      <header id="{f43459b7-56c8-4f28-9854-c7b08b09c9fd}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f5202d83-1a9e-4922-b91e-80958ab9a795}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5705e1fd-c308-49df-95b7-6f6251e4aace}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b3a3415b-8ef2-4743-bbf0-09535780cab3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{98322921-9c8f-4cd9-a22f-5531932079f4}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{3a0cc777-6a4e-4039-b355-3a0176792786}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{001a9e63-d1a8-4857-80a9-dabfe3eba4b5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{069fb2a6-be69-4061-a4ed-12b5ad021c27}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
