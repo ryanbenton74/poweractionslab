@@ -3,10 +3,10 @@ name: import-data-to-target
 on:
   workflow_dispatch:
     inputs:
-      data_file:
+      data_file: "Data/data.zip"
         description: "Path to your data package zip in the repo"
         required: true
-        default: "data.zip"
+        default: "Data/data.zip"
       connection_count:
         description: "Parallel import connections"
         required: false
