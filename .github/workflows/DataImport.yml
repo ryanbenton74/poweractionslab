@@ -3,7 +3,7 @@ name: import-data-to-target
 on:
   workflow_dispatch:
     inputs:
-      data_file: "Data/data.zip"
+      data_file:
         description: "Path to your data package zip in the repo"
         required: true
         default: "Data/data.zip"
