@@ -44,6 +44,14 @@
                   <rows>
                     <row />
                     <row>
+                      <cell id="{f97a7acb-c95c-416e-8a9e-8cbe91cff4d1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date Start" languagecode="1033" />
+                        </labels>
+                        <control id="sled_datestart" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sled_datestart" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{c9a0f1ca-966f-4ffe-9af0-4a2c9808a9b0}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="Date Approved" languagecode="1033" />
